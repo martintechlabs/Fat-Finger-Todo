@@ -1,0 +1,20 @@
+<span class="content_header">Login</span>
+<% begin %>
+  <% facebook_session.user.name %>
+  <% redirect_to redirect_url_or_default %>
+<% rescue %>
+  <p>
+      We use Facebook Connect to manage accounts.<br/>
+      Please click the button below to access our site.<br/>
+  </p>
+
+  <p>
+  <%= fb_connect_javascript_tag %>
+  <%= init_fb_connect "XFBML" %>
+  <%= fb_login_button("window.location = '#{redirect_url_or_default}'") %>
+  </p>
+
+  <p>
+      If you do not have a Facebook account, please visit: <%= link_to 'http://www.facebook.com/', 'http://www.facebook.com/' %>.
+  </p>
+<% end %>

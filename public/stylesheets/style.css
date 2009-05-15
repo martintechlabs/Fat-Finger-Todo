@@ -1,0 +1,167 @@
+/* CSS Document */
+
+body {
+	/*background-image: url(/images/bg_main.png);*/
+	font-family:Arial, Helvetica, sans-serif;
+    background-color: gray;
+	}
+a {
+	color:#ffffff;
+	text-decoration:none;
+	}
+
+a:hover {
+	text-decoration:underline;
+	}
+
+#container {
+	width:800px;
+	margin:auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+	background-color: #211E5A;
+}
+
+#header {
+	width:100%;
+	height:70px;
+	}
+#header_left {
+	width:600px;
+	height:70px;
+	float:left;
+	}
+	.hdr_main_text {
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:50px;
+		color:#ffffff;
+		margin-left:5px;
+		}
+	.hdr_sub_text {
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:16px;
+		margin-left:15px;
+		}
+
+#header_right {
+	width:350px;
+	height:90px;
+	float:right;
+}
+
+.hdr_quote_text {
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	vertical-align:middle;
+}
+
+#vertnavbar {
+	width:100%;
+	height:30px;
+	}
+
+#navbuttons {
+	width:100%;
+	height:30px;
+	background-color: #D3D3D3;
+	}
+
+#navbuttons ul {
+	display: inline;
+	list-style: none;
+
+	}
+
+#navbuttons li {
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	display: inline;
+	list-style: none;
+	float:left;
+	border-left:2px #333333 solid;
+	border-top:none;
+	border-bottom:none;
+	border-right:none;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 30px;
+}
+
+#navbuttons li a {
+	color:#333333;
+	text-decoration:none;
+}
+
+#navbuttons li a:hover {
+	color:#CC0000;
+}
+
+#navbuttons li.first {
+	border-left:none;
+}
+
+#navbuttons li.last {
+    border-right:2px solid #333333;
+}
+
+#content {
+	width:790px;
+	margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+
+.content_header {
+    font-size:24px;
+	color:#ffffff;
+}
+
+.content_subheader {
+    font-size:18px;
+	color:#ffffff;
+}
+
+#footer {
+	width:100%;
+	font-size:10px;
+	}
+
+ul {
+    padding: 0px 0px 0px 0px;
+}
+
+.todoitem {
+    width: 500px;
+    padding: 5px 10px 5px 10px;
+    margin-left: 0px;
+    margin-bottom: 2px;
+    list-style: none;
+	border: thin dotted gray;
+	background: lightyellow;
+	font-size: 16pt;
+	height: 30px;
+    cursor: move;
+    color: black;
+}
+
+.itemtext {
+    width: 100%;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.deletebutton {
+    border: gray outset 1px;
+    font-style: normal;
+    width: 20px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 2px 5px 0px 5px;
+    margin: 0px 0px 0px 0px;
+    color: red;
+}
+
+.enterdescription {
+    font-size: 16pt;
+}
+

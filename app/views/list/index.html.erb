@@ -1,0 +1,28 @@
+<span class="content_header">My List</span>&nbsp;&nbsp;&nbsp;<%= link_to '[ Save Order ]', "#", :onclick => "save_order(Sortable.serialize(\'mainlist\'))" %>
+<% if @mainlist.empty? %>
+<p id="emptymainlist">Your list is empty.</p>
+<% end %>
+<div id="mainlist">
+<% @mainlist.each do |td| %>
+    <table border="0" id="item_<%= td.id %>" class="todoitem" cellpadding="0" cellspacing="0">
+        <tr width="100%">
+            <td class="itemtext"><%= td.description %></td>
+            <td valign="top"><a href="<%= url_for :action => 'delete', :id => td %>"><div class="deletebutton">X</div></a></td>
+        </tr>
+    </table>
+<% end %>
+</div>
+<p id="mainnewlistorder"></p>
+<p>
+<% form_tag :action => 'add' do -%>
+    <div><%= text_field_tag('description', nil, :size => 30, :class => 'enterdescription') %> <%= submit_tag 'Add', :class => 'enterdescription' %></div>
+<% end -%>
+
+
+<%= sortable_element('mainlist', :url => {:action => :save_order}, :tag => 'table') %>
+
+<script type="text/javascript">
+function save_order(qs) {
+    window.location = "/list/save_order?" + qs;
+}
+</script>
